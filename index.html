@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<title>FLA PROJECT</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+	</div>
+	<div class="slidebar">
+	</div>
+	<div class="msg-container">
+		<div id="slider">
+			<div class="msg-col">
+<h1>DFA(Dterministic Finite Automata)</h1>
+<p>•DFA refers to deterministic finite automata. Deterministic refers to the uniqueness of the computation. The finite automata are called deterministic finite automata if the machine is read an input string one symbol at a time.
+<br><br>•In DFA, there is only one path for specific input from the current state to the next state.
+<br><br>•DFA does not accept the null move, i.e., the DFA cannot change state without any input character.
+<br><br>•DFA can contain multiple final states. It is used in Lexical Analysis in Compiler
+
+</p>
+<a href="https://www.javatpoint.com/deterministic-finite-automata">Learn More</a>
+</div>
+<div class="msg-col">
+<h1>NFA (Non-Deterministic finite automata)</h1>
+<p>	•NFA stands for non-deterministic finite automata. It is easy to construct an NFA than DFA for a given regular language.
+<br><br>•The finite automata are called NFA when there exist many paths for specific input from the current state to the next state.
+<br><br>•Every NFA is not DFA, but each NFA can be translated into DFA.
+<br><br>•NFA is defined in the same way as DFA but with the following two exceptions, it contains multiple next states, and it contains ε transition.
+
+</p>
+<a href="https://www.javatpoint.com/non-deterministic-finite-automata">Learn More</a>
+</div>
+<div class="msg-col">
+	<h1>Difference between NFA and DFA</h1>
+	<p>
+		<span>DFA</span>
+		<ul>
+		<li>DFA stands for Deterministic Finite Automata.</li>
+		<li>For each symbolic representation of the alphabet, there is only one state transition in DFA</li>
+		<li>DFA cannot use Empty String transition.</li>
+		<li>DFA can be understood as one machine</li>
+	</ul>
+</p>
+<p>
+	<span>NFA</span>
+	 <ul>
+	 	<li>NFA stands for Nondeterministic Finite Automata.</li>
+	 	<li>No need to specify how does the NFA react according to some symbol.</li>
+	 	<li>NFA can use Empty String transition.</li>
+	 	<li>NFA can be understood as multiple little machines computing at the same time.</li>
+	 </ul>
+	</p>
+	<a href="https://www.stechies.com/difference-between-nfa-dfa/">Learn More</a>
+</div>
+<div  class="msg-col">
+	<h1>CONVERTER</h1>
+	<p></p>
+</div>
+</div>
+</div>
+
+<div class="controller">
+    <div id="line1"></div>
+    <div id="line2"></div>
+    <div id="line3"></div>
+    <div id="line4"></div>
+    <div id="active"></div>
+</div>
+
+
+<script>
+	var slider = document.getElementById('slider');
+	var active = document.getElementById('active');
+	var line1 = document.getElementById('line1');
+	var line2 = document.getElementById('line2');
+	var line3 = document.getElementById('line3');
+	var line4 = document.getElementById('line4');
+
+	line1.onclick = function(){
+		slider.style.transform ='translateX(0)';
+		active.style.top='0px';
+	}
+	line2.onclick = function(){
+		slider.style.transform ='translateX(-25%)';
+		active.style.top='80px';
+	}
+	line3.onclick = function(){
+		slider.style.transform ='translateX(-50%)';
+		active.style.top='160px';
+	}
+	line4.onclick = function(){
+		slider.style.transform ='translateX(-75%)';
+		active.style.top='240px';
+	}
+
+</script>
+
+
+
+</body>
+</html>
